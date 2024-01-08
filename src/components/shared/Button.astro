@@ -2,17 +2,19 @@
 interface Props {
   title: string;
   to?: string;
+  download?: string;
 }
 
-const { title, to } = Astro.props;
+const { title, to, download } = Astro.props;
 ---
 
 <div class="button">
-  <a href={to}>{title}</a>
+  <a download={download} href={to}>{title}</a>
 </div>
 
 <style>
   a {
+    text-decoration: none;
     width: 100%;
     padding: 1rem 2rem;
     border-radius: 1rem;
