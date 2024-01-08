@@ -1,0 +1,225 @@
+---
+import IconHome from ".././../public/IconHome.webp";
+import Button from "../../src/components/shared/Button.astro";
+---
+
+<section class="home">
+  <div class="presentation">
+    <h2>Hi there! I'm</h2>
+    <span class="name">Junior Calva</span>
+    <p class="profession">Software Developer</p>
+    <p class="desc">
+      Hello! I'm from Ecuador. Specializing in both frontend and backend, I
+      create impactful digital solutions from ideation to deployment.
+    </p>
+    <div class="cv">
+      <Button title="Download Cv" />
+    </div>
+  </div>
+  <div class="blur"></div>
+  <div class="blurviolet"></div>
+  <figure class="iconHome"><img src={IconHome.src} alt="" /></figure>
+</section>
+
+<style>
+  .home {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .home .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .home .presentation h2 {
+    margin-bottom: 0;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .home .presentation .name {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(45deg, #195b9b, #209a98);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: appear 10s infinite;
+  }
+
+  .home .presentation .desc {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text);
+    width: 100%;
+  }
+
+  @keyframes appear {
+    0%,
+    100% {
+      background: linear-gradient(45deg, #1d72c8, #209a98);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    25% {
+      background: linear-gradient(45deg, #1d72c8, #29cac8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    50% {
+      background: linear-gradient(45deg, #29cac8, #195b9b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    75% {
+      background: linear-gradient(45deg, #195b9b, #29cac8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .home .presentation .profession {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+  }
+
+  .home .blur {
+    filter: blur(8rem);
+    top: 25%;
+    right: 5%;
+    position: absolute;
+    background-color: #00ffc389;
+    border-radius: 50%;
+    width: 50%;
+    height: 7rem;
+  }
+
+  .home::before {
+    content: "";
+    filter: blur(6rem);
+    top: 50vh;
+    right: 7rem;
+    position: absolute;
+    background-color: #7000ff;
+    border-radius: 50%;
+    width: 40%;
+    height: 7rem;
+    animation: lighticon 3s infinite;
+  }
+
+  @keyframes lighticon {
+    0% {
+      background-color: #7000ff;
+    }
+    50% {
+      background-color: #6f00ff4a;
+    }
+    100% {
+      background-color: #7000ff;
+    }
+  }
+
+  .home .blurviolet {
+    filter: blur(7rem);
+    top: 25%;
+    right: 50%;
+    position: absolute;
+    background-color: #7000ff;
+    border-radius: 50%;
+    width: 40%;
+    height: 3rem;
+  }
+
+  .home .iconHome {
+    display: none;
+    justify-content: start;
+    align-items: start;
+    width: 41rem;
+    height: 35rem;
+  }
+
+  .home .iconHome img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    animation: pulse 3s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: translateY(10px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
+
+  .presentation .cv {
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .home {
+      height: calc(100vh - 5rem);
+    }
+
+    .home .presentation {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+
+    .home .presentation h2 {
+      margin-bottom: 0;
+      color: white;
+      font-size: 5rem;
+    }
+
+    .home .presentation .name {
+      font-size: 4rem;
+      margin-left: 1rem;
+    }
+    .home .presentation .desc {
+      width: 30rem;
+    }
+
+    .home .iconHome {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      width: 41rem;
+      height: 35rem;
+    }
+
+    .presentation .cv {
+      margin-top: 0rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .home .presentation .name {
+      font-size: 4rem;
+      margin-left: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .home .presentation .name {
+      font-size: 5rem;
+      margin-left: 3rem;
+    }
+  }
+</style>

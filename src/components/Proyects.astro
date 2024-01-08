@@ -1,0 +1,238 @@
+---
+import netmall1 from "../../public/netmall1.webp";
+import next from "../../public/next.png";
+import tailwind from "../../public/tailwind.webp";
+import ts from "../../public/ts.webp";
+import redux from "../../public/redux.png";
+import node from "../../public/node.webp";
+import postgresql from "../../public/postgresql.webp";
+import express from "../../public/express.png";
+import apple from "../../public/apple.webp";
+import pizza from "../../public/pizza.webp";
+import html from "../../public/html.png";
+import css from "../../public/css.png";
+import js from "../../public/js.png";
+---
+
+<section class="proyects" id="proyects">
+  <h2 class="title">Proyects</h2>
+  <div class="container_proyects">
+    <article class="card_proyect">
+      <div class="images"><img src={apple.src} alt="" /></div>
+      <section class="desc">
+        <h3>Apple web</h3>
+        <p class="subtitle">
+          The Apple Products website is a showcase of Apple's latest and
+          greatest devices. From the powerful iPhone to the innovative iPad,
+          stylish Apple Watch, and immersive Music/TV experiences
+        </p>
+        <div class="frontend">
+          <h3 class="subtitle">Stack Tecnologies</h3>
+          <div class="icons">
+            <img src={html.src} alt="" title="tailwind" />
+            <img src={css.src} alt="" />
+            <img src={js.src} alt="" />
+          </div>
+        </div>
+      </section>
+      <div class="buttons">
+        <a
+          href="https://github.com/JuniorCalva40"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>Code</a
+        >
+        <a
+          href="https://juniorcalva40.github.io/apple/"
+          target="_blank"
+          rel="noreferrer">Live Preview</a
+        >
+      </div>
+    </article>
+    <article class="card_proyect">
+      <div class="images">
+        <img src={netmall1.src} alt="" />
+      </div>
+      <section class="desc">
+        <h3>NETMALL</h3>
+        <p class="subtitle">
+          It's a multi-user tech marketplace specializing in cutting-edge
+          products, enhancing the online shopping experience.
+        </p>
+        <div class="frontend">
+          <h3 class="subtitle">Frontend</h3>
+          <div class="icons">
+            <img style="width: 4rem;" src={next.src} alt="Next logo" />
+            <img src={tailwind.src} alt="" title="tailwind" />
+            <img src={ts.src} alt="" />
+            <img src={redux.src} alt="" />
+            <img src={postgresql.src} alt="" />
+            <img style="width: 3rem;" src={node.src} alt="" title="tailwind" />
+            <img style="width: 5rem;" src={express.src} alt="Next logo" />
+          </div>
+        </div>
+      </section>
+      <div class="buttons">
+        <a target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github"></i>Code</a
+        >
+        <a rel="noreferrer">Coming Soon</a>
+      </div>
+    </article>
+    <article class="card_proyect">
+      <div class="images"><img src={pizza.src} alt="" /></div>
+      <section class="desc">
+        <h3>World Pizza</h3>
+        <p class="subtitle">
+          Featuring an appealing design, interactive elements, and showcasing
+          diverse pizza styles worldwide
+        </p>
+        <div class="frontend">
+          <h3 class="subtitle">Stack Tecnologies</h3>
+          <div class="icons">
+            <img src={html.src} alt="" title="tailwind" />
+            <img src={css.src} alt="" />
+            <img src={js.src} alt="" />
+          </div>
+        </div>
+      </section>
+      <div class="buttons">
+        <a
+          href="https://github.com/JuniorCalva40/worldpizza"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>Code</a
+        >
+        <a
+          href="https://juniorcalva40.github.io/worldpizza/"
+          target="_blank"
+          rel="noreferrer">Live Preview</a
+        >
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .proyects {
+    width: 100%;
+    margin-top: 50rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+  }
+
+  .container_proyects {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 3rem;
+  }
+
+  .card_proyect {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 20rem;
+    height: 40rem;
+    transition: box-shadow 0.5s ease-in-out;
+  }
+
+  .card_proyect:hover {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.107);
+  }
+
+  .card_proyect .desc {
+    padding: 1rem 1rem;
+  }
+
+  .card_proyect .desc h3 {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+  }
+
+  .card_proyect {
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.252);
+  }
+
+  .card_proyect .images {
+    width: 90%;
+    height: 12rem;
+  }
+
+  .card_proyect .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+  }
+
+  .icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .icons img {
+    width: 2rem;
+    object-fit: contain;
+    border-radius: 0.1rem;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, #195a9b4c, #6f00ff3f);
+    font-size: 1rem;
+    box-shadow: 0px -3px 15px 0px #6f00ff70 inset;
+  }
+
+  @media screen and (min-width: 768px) {
+    .proyects {
+      padding-top: 2rem;
+      width: 100%;
+      max-height: 100vh;
+      margin-top: 1rem;
+    }
+
+    .card_proyect > img {
+      width: 15rem;
+    }
+  }
+</style>

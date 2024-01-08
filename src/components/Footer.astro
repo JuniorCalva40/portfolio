@@ -1,0 +1,122 @@
+---
+
+---
+
+<footer class="footer" id="contact">
+  <h2 class="title">Contact Me</h2>
+  <form class="form">
+    <label>
+      <input type="text" required placeholder="Your Name" name="name" />
+    </label>
+    <label>
+      <input
+        type="email"
+        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        required
+        placeholder="Your Email"
+        name="email"
+      />
+    </label>
+    <label>
+      <textarea
+        placeholder="Your Message"
+        name="message"
+        data-pattern="^.{1,255}$"
+        required></textarea>
+    </label>
+    <button class="send" type="submit">Send</button>
+  </form>
+  <div class="blurviolet"></div>
+</footer>
+
+<style>
+  .footer {
+    margin: 5rem auto;
+    position: relative;
+    max-width: 400px;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blurviolet {
+    z-index: -100;
+    filter: blur(8rem);
+    top: 25%;
+    right: 50%;
+    position: absolute;
+    background-color: #0291ff;
+    border-radius: 50%;
+    width: 40%;
+    height: 8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  input,
+  label,
+  textarea {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .form label input,
+  .form textarea {
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+
+    font-size: 1rem;
+
+    color: white;
+  }
+
+  .form label input::placeholder,
+  .form textarea::placeholder {
+    color: rgba(226, 225, 225, 0.619);
+  }
+
+  .form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  .form .send {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem 0rem;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, #195a9b4c, #6f00ff3f);
+    font-size: 1rem;
+    box-shadow: 0px -3px 15px 0px #6f00ff70 inset;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer {
+      height: 100vh;
+    }
+    .footer {
+      max-width: 450px;
+    }
+  }
+</style>
